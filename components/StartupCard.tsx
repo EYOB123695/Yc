@@ -23,11 +23,12 @@ const StartupCard = ({post} : {post: StartupTypeCard}) => {
       </div>
       <div className='flex-between mt-5 gap-5'>
         <div className='flex-1' >
-          <Link href = {`/user/${post.author?._id}`}>
          <p className='text-16-medium line-clamp-1'>
+  <Link href={`/user/${post.author?._id}`}>
     {post?.author?.name ?? 'Unknown'}
-  </p>
-          </Link>
+  </Link>
+</p>
+
           <Link href = {`/startup/${post?._id}`}>
           <h3 className='text-26-semibold line-clamp-1' >
           {post?.title}
